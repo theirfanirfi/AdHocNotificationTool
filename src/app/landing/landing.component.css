@@ -1,0 +1,15 @@
+#bodylanding {background-color: rgba(243, 242, 242, 0.938);}
+#rightList{list-style-type: none;}
+#rightList li {display: inline-block;margin-top:26px;margin-left:12px;border-bottom:3px solid rgba(243, 242, 242, 0.938);}
+#rightList li:hover {border-bottom: 3px solid rgb(95, 179, 212);cursor: pointer;}
+#refresh {background-color:white;padding:6px;}
+#refresh:hover {cursor: pointer;}
+#btns {float:right;}
+table tr .time {width:20px;height: 100px;padding-top:50px;}
+.tableboxe {width: 60px;height: 100px; text-align: center;font-weight: bold;padding-top:50px;
+-webkit-transition: all,1s;
+-moz-transition: all,1s;
+transition: all,1s;
+}
+.tableboxe:hover {transform: scale(1.2); cursor:pointer;}
+.boxgray{background-color: darkgray;}

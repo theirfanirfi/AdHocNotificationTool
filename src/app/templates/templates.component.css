@@ -1,0 +1,5 @@
+img {transition: all,1s;}
+img:hover {
+	transform: scale(1.1);
+}
+.box {width: 90%;background-color: #00B0F0;padding:20px;border-radius: 12px;margin-left: 16px;margin-bottom: 4px;}

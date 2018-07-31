@@ -1,0 +1,142 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+       <img src="assets/images/antlogo.png" class="img-responsive" style="" />
+    </div>
+    <div class="col-md-8">
+           <div style="float: left;">
+  <h1 style="">
+  {{title}}
+  </h1>
+</div>
+    </div>
+  </div>
+  <div class="row" style="padding-top:18px;"  id="bodylanding">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-2">
+          <label>Company</label>
+          <input type="text" placeholder="Company" class="form-control" [value]="company" (keyup)="getValueCompany($event)" />
+        </div>
+
+        <div class="col-md-2">
+            <label>Instructor</label>            
+          <input type="text" placeholder="Instructor" class="form-control" [value]="instructor" (keyup)="getValueInstructor($event)" />
+        </div>
+
+        <div class="col-md-2">
+            <label>Course</label>            
+          <input type="text" placeholder="Course" class="form-control" [value]="landingcourse" (keyup)="getValueCourse($event)" />
+        </div>
+
+        <div class="col-md-6">
+          
+          <div style="float:right;">
+              <div class="row">
+          <ul id="rightList">
+            <li><i id="refresh" (click)="landingRefresh($event)" class="glyphicon glyphicon-repeat"></i></li>
+            <li>List</li>
+            <li>Day</li>
+            <li>Week</li>
+            <li>Month</li>
+          </ul>
+        </div>
+
+        <div class="row" id="btns">
+            <button><i class="glyphicon glyphicon-triangle-left"></i></button>
+            <button><i class="glyphicon glyphicon-triangle-right"></i></button>
+            <button>Today</button>
+          </div>
+      </div>
+
+     
+        </div>
+
+      </div>
+
+
+      <! -- Date and date line-->
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-2" style="font-weight: bold;">Dec 3 - 9 2017</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered" style="background-color:white;">
+            <tr>
+              <td style="width:180px; text-align:center;">Daypart</td>
+              <td style="width:134px; text-align:center;">Sun 12/3</td>
+              <td style="width:137px; text-align:center;">Mon 12/4</td>
+              <td style="text-align:center;">Tue 12/5</td>
+              <td style="width:134px; text-align:center;">Wed 12/6</td>
+              <td style="text-align:center;">Thu 12/7</td>
+              <td style="text-align:center;">Fri 12/8</td>
+              <td style="text-align:center;">Sat 12/9</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered" style="background-color:white;" id="tableboxes">
+            <tr>
+              <td class="time">Morning</td>
+              <td class="tableboxe boxgray" (click)="sub($event,'12/03/2017', 'Morning')">1</td>
+              <td class="tableboxe" (click)="sub($event,'12/04/2017', 'Morning')">5</td>
+              <td class="tableboxe" (click)="sub($event,'12/05/2017', 'Morning')">9</td>
+              <td class="tableboxe" (click)="sub($event,'12/06/2017', 'Morning')">13</td>
+              <td class="tableboxe" (click)="sub($event,'12/07/2017', 'Morning')">17</td>
+              <td class="tableboxe" (click)="sub($event,'12/08/2017', 'Morning')">21</td>
+              <td class="tableboxe boxgray"></td>
+            </tr>
+            <tr>
+                <td class="time">Mid-Day</td>
+                <td class="tableboxe boxgray" (click)="sub($event,'12/03/2017', 'Mid Day')">2</td>
+                <td class="tableboxe" (click)="sub($event,'12/04/2017', 'Mid Day')">6</td>
+                <td class="tableboxe" (click)="sub($event,'12/05/2017', 'Mid Day')">10</td>
+                <td class="tableboxe" (click)="sub($event,'12/06/2017', 'Mid Day')">14</td>
+                <td class="tableboxe" (click)="sub($event,'12/07/2017', 'Mid Day')">18</td>
+                <td class="tableboxe" (click)="sub($event,'12/08/2017', 'Mid Day')">22</td>
+              <td class="tableboxe boxgray"></td>
+              
+            </tr>
+            <tr>
+                <td class="time">Afternoon</td>
+                <td  class="tableboxe boxgray" (click)="sub($event,'12/03/2017', 'Afternoon')">3</td>
+                <td  class="tableboxe" (click)="sub($event,'12/04/2017', 'Afternoon')">7</td>
+                <td class="tableboxe" (click)="sub($event,'12/05/2017', 'Afternoon')">11</td>
+                <td class="tableboxe" (click)="sub($event,'12/06/2017', 'Afternoon')">15</td>
+                <td class="tableboxe" (click)="sub($event,'12/07/2017', 'Afternoon')">19</td>
+                <td class="tableboxe" (click)="sub($event,'12/08/2017', 'Afternoon')">23</td>
+              <td class="tableboxe boxgray"></td>
+              
+            </tr>
+            <tr>
+                <td class="time">Evening</td>
+                <td class="tableboxe boxgray" (click)="sub($event,'12/03/2017', 'Evening')">4</td>
+                <td class="tableboxe" (click)="sub($event,'12/04/2017', 'Evening')">8</td>
+                <td class="tableboxe" (click)="sub($event,'12/05/2017', 'Evening')">12</td>
+                <td class="tableboxe" (click)="sub($event,'12/06/2017', 'Evening')">16</td>
+                <td class="tableboxe" (click)="sub($event,'12/07/2017', 'Evening')">20</td>
+                <td class="tableboxe" (click)="sub($event,'12/08/2017', 'Evening')">24</td>
+              <td class="tableboxe boxgray"></td>
+              
+            </tr>
+
+
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+
+    </div>
+  </div>
+
+
+
+

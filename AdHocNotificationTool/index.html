@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AdHocNotificationTool</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="bootstrap/js/angular.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/myscript.js"></script>
+</head>
+<body>
+
+	<div class="container" ng-app="myApp" ng-controller="myController">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+       <img src="assets/images/antlogo.png" class="img-responsive" style="" />
+    </div>
+    <div class="col-md-8">
+           <div style="float: left;">
+  <h1 style="">
+  {{title}}
+  </h1>
+</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10" style="text-align: center;" >
+ 
+  <div style="padding: 30px;">
+ <form >
+        <div class="row" style="margin-top: 8px;">
+        <span style="font-size: 20px; float: left;margin:11px;margin-right: 30px;">Headline: </span>
+        <input type="text" placeholder="Headline" style="padding: 22px;width: 60%;float: left;" class="form-control" >
+      </div>
+        <div class="row" style="margin-top: 26px;">
+        <span style="float:left;font-size: 20px; margin:11px;">Body Copy: </span>
+        <textarea style="padding: 22px;width: 60%;float: left;" class="form-control" ></textarea>
+      </div>
+
+       <div class="row" style="margin-top: 26px;">
+        <span style="float:left;font-size: 20px; margin:11px;margin-right: 64px;">Date: </span>
+        <input type="Date" style="padding: 22px;width: 60%;float: left;" class="form-control" />
+      </div>
+
+      <div class="row" style="margin-top: 26px;">
+        <span style="float:left;font-size: 20px; margin:11px;margin-right: 30px;">Day Part: </span>
+        <select style="width: 60%;float: left;" class="form-control">
+          <option>Select Day Part</option>
+          <option value="Morning">Morning</option>
+          <option value="Mid Day">Mid Day</option>
+          <option value="Afternoon or Evening">Afternoon or Evening</option>
+        
+        </select>
+      </div>
+
+      <div class="row" style="margin-top: 26px;">
+        <span style="float:left;font-size: 20px; margin:11px;margin-right: 42px;">Course: </span>
+        <input type="text" style="padding: 22px;width: 60%;float: left;" placeholder="Course" class="form-control" />
+      </div>
+
+       <div class="row" style="margin-top: 26px;">
+        <div class="col-md-9">
+        <input type="submit" style="float: right;" value="Proceed" class="btn btn-primary" />
+      </div>
+      </div>
+
+  </form>
+
+</div>
+
+
+     
+    </div>
+  </div>
+</div>
+ 
+
+
+
+
+
+</body>
+</html>

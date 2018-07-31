@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+       <img src="assets/images/antlogo.png" class="img-responsive" style="" />
+    </div>
+    <div class="col-md-8">
+           <div style="float: left;">
+  <h1 style="">
+  {{title}}
+  </h1>
+</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10" style="text-align: center; background-color: rgb(241, 241, 241);">
+
+  <div style="padding: 30px;">
+ <form (submit)="proceedFunc($event)">
+   <div class="row" style="margin-top: 8px;">
+     <span style="font-size: 20px; float: left;margin:11px;margin-right: 30px;">Headline <br/><span style="font-size: 12px;"> <48 Characters </span></span>
+
+     <input type="text" placeholder="Headline" style="padding: 22px;width: 60%;float: left;" class="form-control" maxlength="48">
+   </div>
+
+        <div class="row" style="margin-top: 26px;">
+          <span style="float:left;font-size: 20px; margin:11px;margin-right:12px;">Body Copy <br/><span style="font-size: 12px;"> <168 Characters </span> </span>
+        <textarea style="padding: 22px;width: 60%;float: left;" class="form-control" ></textarea>
+      </div>
+
+       <div class="row" style="margin-top: 26px;">
+        <span style="float:left;font-size: 20px; margin:11px;margin-right: 64px;">Date: </span>
+        <input type="text" readonly style="padding: 22px;width: 60%;float: left;" class="form-control" [value]="date" />
+      </div>
+
+      <div class="row" style="margin-top: 26px;">
+        <span style="float:left;font-size: 20px; margin:11px;margin-right: 30px;">Day Part: </span>
+        <select style="width: 60%;float: left;" class="form-control" [value]="daypart">
+          <option value="">Select Day Part</option>
+          <option value="Morning">Morning</option>
+          <option value="Mid Day">Mid Day</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+
+        </select>
+      </div>
+
+      <div class="row" style="margin-top: 26px;">
+        <span style="float:left;font-size: 20px; margin:11px;margin-right: 42px;">Course: </span>
+        <input [value]="course" type="text" style="padding: 22px;width: 60%;float: left;" placeholder="Course" class="form-control" />
+      </div>
+
+       <div class="row" style="margin-top: 26px;">
+        <div class="col-md-9">
+        <input type="submit" style="float: right;" value="Proceed" class="btn btn-primary" />
+
+      </div>
+      </div>
+
+  </form>
+
+</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
